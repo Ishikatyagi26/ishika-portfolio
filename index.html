@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ishika Tyagi – UI/UX Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <h1>Ishika Tyagi</h1>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="menu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>UI/UX & <span>Digital</span><br>Product Designer</h2>
+        <p>
+            B.Tech Computer Science graduate transitioning into UI/UX and
+            Digital Product Design, focused on user-centered and visually
+            clean digital experiences.
+        </p>
+    </div>
+
+    <div class="hero-image">
+        <img src="profile.png" alt="Profile">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-light">
+    <h3>About Me</h3>
+    <div class="about-box">
+        <p>
+            I’m <b>Ishika Tyagi</b>, a Computer Science graduate exploring the world of UI/UX and digital design.
+I enjoy turning ideas into simple, intuitive, and visually clean digital experiences.
+My background in technology helps me think logically, while design allows me to be creative.
+I focus on understanding users and designing with clarity and purpose.
+This portfolio reflects my learning journey, experiments, and growing design skills.
+        </p>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-grey">
+    <h3>Selected Projects</h3>
+
+    <div class="projects-grid">
+        <a href="project-portfolio.html" class="project-card">
+            <img src="project1.png">
+            <p>Portfolio Website</p>
+        </a>
+
+        <a href="project-fashion-app.html" class="project-card">
+            <img src="project2.png">
+            <p>Mobile App UI</p>
+        </a>
+
+        <a href="project-redesign.html" class="project-card">
+            <img src="project3.png">
+            <p>Website Redesign</p>
+        </a>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section-light">
+    <h3>Education</h3>
+
+    <div class="education-grid">
+
+        <div class="edu-card">
+            <h4>Bachelor of Engineering in Computer Science (CSE)</h4>
+            <p>Subharti Institute of Technology and Engineering</p>
+            <p class="edu-year">2021 – 2025</p>
+            <p class="edu-score">CGPA: 8.40 / 10 (77.14%)</p>
+        </div>
+
+        <div class="edu-card">
+            <h4>Intermediate (CBSE)</h4>
+            <p>Nalanda Modern Public School, Delhi – 110084</p>
+            <p class="edu-year">2021</p>
+            <p class="edu-score">Percentage: 82%</p>
+        </div>
+
+        <div class="edu-card">
+            <h4>Matriculation (CBSE)</h4>
+            <p>Nalanda Modern Public School, Delhi – 110084</p>
+            <p class="edu-year">2019</p>
+            <p class="edu-score">Percentage: 85%</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-grey contact">
+    <h3>Contact</h3>
+    <p>Email: ishika26tyagi@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Ishika Tyagi - Personal Portfolio
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

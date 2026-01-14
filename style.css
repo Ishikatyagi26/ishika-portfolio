@@ -1,0 +1,264 @@
+:root {
+    --dark: #0f1021;
+    --accent: #19d3ff;
+
+    --bg-light: #ffffff;
+    --bg-grey: #f5f6fa;
+
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+    background: var(--bg-grey);
+    color: var(--text-dark);
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav h1 {
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 160px 8% 120px;
+    background:
+        linear-gradient(rgba(15,16,33,0.85), rgba(15,16,33,0.85)),
+        url("hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 620px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+.hero span {
+    color: var(--accent);
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+/* HERO IMAGE – BIG AGAIN */
+.hero-image {
+    position: absolute;
+    right: -2%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 680px;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.45));
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 8%;
+}
+
+.section-light {
+    background: var(--bg-light);
+}
+
+.section-grey {
+    background: var(--bg-grey);
+}
+
+section h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+section h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin-top: 12px;
+    border-radius: 10px;
+    background: var(--accent);
+}
+
+/* ABOUT */
+.about-box {
+    max-width: 900px;
+    background: white;
+    padding: 36px;
+    border-radius: 22px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: white;
+    padding: 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 12px;
+}
+
+/* EDUCATION */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.edu-card {
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+.edu-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.edu-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.edu-year {
+    font-weight: 500;
+}
+
+.edu-score {
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* FOOTER */
+footer {
+    background: #0b0c1a;
+    color: #cbd5f5;
+    text-align: center;
+    padding: 26px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        padding: 140px 6% 90px;
+        text-align: center;
+    }
+
+    .hero-image {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        opacity: 0.35;
+    }
+
+    .hero-image img {
+        width: 380px;
+    }
+}
