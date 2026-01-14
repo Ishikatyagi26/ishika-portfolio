@@ -244,21 +244,31 @@ footer {
         display: flex;
     }
 
+    /* HERO MOBILE FIX */
     .hero {
-        padding: 140px 6% 90px;
+        min-height: auto;          /* 🔥 removes forced height */
+        padding: 140px 6% 120px;
         text-align: center;
     }
 
+    .hero-content {
+        margin: auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* IMAGE BEHIND TEXT */
     .hero-image {
         position: absolute;
         inset: 0;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;       /* 🔥 center image */
+        z-index: 1;
         opacity: 0.35;
     }
 
     .hero-image img {
-        width: 380px;
+        width: 360px;
     }
 }
