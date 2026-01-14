@@ -223,9 +223,10 @@ footer {
 
 /* MOBILE */
 /* ================= MOBILE ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 900px) {
 
-    /* ---------- NAVBAR ---------- */
+    /* ---------- NAV ---------- */
     .menu-btn {
         display: block;
         font-size: 28px;
@@ -242,29 +243,22 @@ footer {
         align-items: center;
         padding: 20px 0;
         display: none;
-        box-shadow: 0 12px 25px rgba(0,0,0,0.08);
     }
 
     .nav-links.show {
         display: flex;
     }
 
-    .nav-links a {
-        padding: 10px 0;
-    }
-
     /* ---------- HERO ---------- */
     .hero {
-        min-height: auto;                 /* removes forced height */
-        padding: 140px 6% 40px;           /* 🔥 NO GAP at bottom */
+        min-height: auto;          /* allow content to decide height */
+        padding: 140px 6% 0;       /* 🔥 NO bottom padding */
         text-align: center;
         position: relative;
     }
 
     .hero-content {
-        margin: auto;
-        position: relative;
-        z-index: 2;
+        margin-bottom: 0;          /* no gap after text */
     }
 
     .hero h2 {
@@ -274,25 +268,23 @@ footer {
 
     .hero p {
         font-size: 15px;
-        margin-top: 16px;
+        margin: 16px 0 0 0;        /* no bottom margin */
         color: #d1d5db;
     }
 
-    /* ---------- IMAGE BEHIND TEXT ---------- */
+    /* ---------- IMAGE TOUCHES HERO BOTTOM ---------- */
     .hero-image {
-        position: absolute;
-        inset: 0;
+        position: relative;        /* normal document flow */
+        margin-top: 12px;          /* small spacing from text */
         display: flex;
         justify-content: center;
-        align-items: flex-end;             /* image sticks under text */
-        padding-bottom: 10px;              /* tiny controlled space */
-        z-index: 1;
-        opacity: 0.35;
-        pointer-events: none;
     }
 
     .hero-image img {
-        width: 360px;                      /* balanced mobile size */
+        width: 360px;
+        display: block;
+        margin-bottom: 0;          /* 🔥 image ends hero */
     }
 }
+
 
